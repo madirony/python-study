@@ -1,0 +1,14 @@
+<html>
+<head>
+</head>
+<body>
+	{% extends "base.html" %}
+	{% block content %}
+	<form action="/signin" method="POST">
+		<input type="email" name="userEmail"/>
+		<input type="password" name="userPassword"/>
+		<input type="submit" value="LogIn"/>
+	</form>
+	{% endblock content %}
+</body>
+</html>
