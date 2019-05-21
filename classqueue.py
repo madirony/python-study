@@ -1,7 +1,7 @@
 class Queue: # 고정길이 Queue 클래스
     def __init__(self): #인스턴트 생성 초기에 변수를 지정해주는 생성자
         self.queuelist = [] #큐 리스트
-        self.queueln = 0 #큐 크기변수 디폴트 값 False
+        self._queueln = 0 #큐 크기변수 디폴트 값 False
 
     def push(self,i):#Queue push
         self.queuelist.append(i) #리스트에 숫자를 넣습니다.

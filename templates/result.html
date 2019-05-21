@@ -1,0 +1,19 @@
+<html>
+<head>
+</head>
+<body>
+{% for key,value in result.items() %}
+    {% if value|int >= 90 %}
+    <p> {{key}} A</p>
+    {% elif value|int >= 70 %}
+    <p> {{key}} B</p>
+    {% elif value|int >= 50 %}
+    <p> {{key}} C</p>
+    {% elif value|lower %}
+    <p> {{value|upper}} </p>
+    {% else %}
+    <p> {{key}} D</p>
+    {% endif %}
+{% endfor %}
+</body>
+</html>
