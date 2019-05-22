@@ -8,7 +8,7 @@ with open("mongoDB.json") as Json:
    user_doc = json.loads(Json.read())
 
 app.secret_key = "screendoor"
-mongo_url = user_doc["MongoURL"]
+mongo_url = "mongodb+srv://" + user_doc["MongoID"] + ":" + user_doc["MongoPassword"] + user_doc["MongoURL"]
 client = pymongo.MongoClient(mongo_url)
 db =pymongo.database.Database(client, 'Cluster0')
 LibLib=pymongo.collection.Collection(db,'LibLib')
